@@ -7,7 +7,7 @@
 
 <h3>Purpose</h3>
 <p>
-To continue practicing and improving my skills in Python and OOP while following along in <a href="credits">Python Crash Course</a>
+To continue practicing and improving my skills in Python and OOP while following along in <a href="https://ehmatthes.github.io/pcc_2e/regular_index/">Python Crash Course, 2nd Edition by Eric Matthes</a>
 </p>
 <br/>
 <hr>
