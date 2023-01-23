@@ -9,17 +9,17 @@
 <ul>
   <li>Download and open in VS Code</li>
   <li>Install Pygame</li>
-  <li>
     <ul>
       <li>python -m pip install --user pygame</li>
       <li>Note: if this command doesn't work on mac, try running the command without the '--user' flag.</li>
     </ul>
-  </li>
   <li>Run the program</li>
   <li>Left arrow and Right arrow to move your ship left to right</li>
   <li>Space bar to fire</li>
   <li>To quit the program, press Q or the X on the program toolbar</li>
   </ul>
+  <br/>
+  <hr>
 
 <h3>Purpose</h3>
 <p>
