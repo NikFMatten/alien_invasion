@@ -11,7 +11,7 @@ class Settings:
         # self.bg_color = (230, 230, 230) # Default bg color
         self.bg_color = (35,35,35) # 'Space' color
 
-        # Ship Settings
+        # Ship settings
         self.ship_speed = 1.5
 
         # Bullet settings
@@ -20,3 +20,6 @@ class Settings:
         self.bullet_height = 15
         self.bullet_color = (216,21,36)
         self.bullets_allowed = 3
+
+        # Alien settings
+        self.alien_speed = 1.0
