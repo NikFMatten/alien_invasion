@@ -91,6 +91,10 @@ class AlienInvasion:
             # Hide the mouse cursor
             pygame.mouse.set_visible(False)
 
+            # Play music
+            pygame.mixer.music.load("sound_effects\music.wav")
+            pygame.mixer.music.play(-1)
+
     def _check_keydown_events(self, event):
         """Respondes to key presses"""
         if event.key == pygame.K_RIGHT or event.key == pygame.K_d:
@@ -111,7 +115,9 @@ class AlienInvasion:
 
     def _fire_bullets(self):
         """Create a new bullet and add it to the bullets group"""
+        lazer_sound = pygame.mixer.Sound("sound_effects\lazer_blast.wav")
         if len(self.bullets) < self.settings.bullets_allowed:
+            pygame.mixer.Sound.play(lazer_sound)
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
 
@@ -131,10 +137,12 @@ class AlienInvasion:
         """Respond to bullet-alien collisions"""
         # Remove any bullets and aliens that have not collided
         collisions = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)
-
         if collisions:
             for aliens in collisions.values():
                 self.stats.score += self.settings.alien_points * len(aliens)
+                explosion = pygame.mixer.Sound("sound_effects\explosion.wav")
+                explosion.set_volume(0.5)
+                pygame.mixer.Sound.play(explosion)
             self.sb.prep_score()
             self.sb.check_high_score()
 
