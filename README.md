@@ -39,3 +39,4 @@ To continue practicing and improving my skills in Python and OOP while following
 
 <h3 id="credits">Credits</h3>
 <a href="https://ehmatthes.github.io/pcc_2e/regular_index/">Python Crash Course, 2nd Edition by Eric Matthes</a>
+<p>Star Wars for the background music</p>
