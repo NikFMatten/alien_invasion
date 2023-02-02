@@ -93,6 +93,7 @@ class AlienInvasion:
 
             # Play music
             pygame.mixer.music.load("sound_effects\music.wav")
+            pygame.mixer.music.set_volume(0.1)
             pygame.mixer.music.play(-1)
 
     def _check_keydown_events(self, event):
@@ -116,6 +117,7 @@ class AlienInvasion:
     def _fire_bullets(self):
         """Create a new bullet and add it to the bullets group"""
         lazer_sound = pygame.mixer.Sound("sound_effects\lazer_blast.wav")
+        lazer_sound.set_volume(0.25)
         if len(self.bullets) < self.settings.bullets_allowed:
             pygame.mixer.Sound.play(lazer_sound)
             new_bullet = Bullet(self)
@@ -141,7 +143,7 @@ class AlienInvasion:
             for aliens in collisions.values():
                 self.stats.score += self.settings.alien_points * len(aliens)
                 explosion = pygame.mixer.Sound("sound_effects\explosion.wav")
-                explosion.set_volume(0.5)
+                explosion.set_volume(0.1)
                 pygame.mixer.Sound.play(explosion)
             self.sb.prep_score()
             self.sb.check_high_score()
